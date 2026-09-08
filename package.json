@@ -1,7 +1,7 @@
 {
   "name": "sendcheck-verify",
-  "version": "0.1.0",
-  "description": "Verify-before-pay client for the SendCheck x402 API: free GET /validate pre-check before your agent signs an x402 payment. Zero dependencies, no API key.",
+  "version": "0.2.0",
+  "description": "Verify-before-pay client for the SendCheck x402 API: free address pre-check + the signed service card (ES256 JWS over the payTo and per-route maxPrice) \u2014 pin the key once, verify the payment challenge cryptographically before paying. Zero dependencies.",
   "type": "module",
   "main": "./index.cjs",
   "module": "./index.mjs",
@@ -21,26 +21,32 @@
     "test": "node test/test.mjs"
   },
   "keywords": [
-    "x402",
-    "usdc",
-    "base",
-    "evm",
     "address",
-    "checksum",
-    "eip-55",
-    "verify",
-    "payment",
     "agent",
-    "web3"
+    "attestation",
+    "base",
+    "checksum",
+    "drift",
+    "eip-55",
+    "es256",
+    "evm",
+    "jws",
+    "payment",
+    "pin",
+    "signed",
+    "usdc",
+    "verify",
+    "web3",
+    "x402"
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://gitlab.com/pennyforge-dev/sendcheck-verify.git"
+    "url": "git+https://github.com/pennyforgeorg/sendcheck-verify.git"
   },
   "bugs": {
-    "url": "https://gitlab.com/pennyforge-dev/sendcheck-verify/-/issues"
+    "url": "https://github.com/pennyforgeorg/sendcheck-verify/issues"
   },
-  "homepage": "https://gitlab.com/pennyforge-dev/sendcheck-verify",
+  "homepage": "https://pennyforge.org",
   "license": "MIT",
   "engines": {
     "node": ">=18"
