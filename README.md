@@ -64,7 +64,7 @@ catches a challenge that quietly raises the price above what the key signed.
 ### The drift-proof wiring
 
 ```js
-import { checkService, verifyChallenge, ATTESTATION_EXTENSION } from "sendcheck-verify";
+import { checkService, verifyChallenge, ATTESTATION_EXTENSION } from "@pennyforgeorg/sendcheck-verify";
 
 const origin = "https://api.pennyforge.org";
 
@@ -93,8 +93,16 @@ reasons: `signature_invalid`, `challenge_payto_mismatch`, `price_exceeded`,
 ## Install
 
 ```bash
-# from source (no build step)
-npm install @pennyforgeorg/sendcheck-verify
+# GitHub npm registry (v0.2.0 published 2026-09-08)
+npm install @pennyforgeorg/sendcheck-verify --registry https://npm.pkg.github.com
+```
+
+GitHub's npm registry asks for **any valid GitHub token** even on public reads — put
+`//npm.pkg.github.com/:_authToken=<your GH token>` in your `.npmrc` (classic PAT or
+fine-grained with Packages:Read works). No token handy? Install from the public repo:
+
+```bash
+npm install github:pennyforgeorg/sendcheck-verify
 ```
 
 Requires Node 18+ (uses global `fetch`). Zero dependencies. MIT.
@@ -102,7 +110,7 @@ Requires Node 18+ (uses global `fetch`). Zero dependencies. MIT.
 ## Quickstart
 
 ```js
-import { verifyBeforePay } from "sendcheck-verify";
+import { verifyBeforePay } from "@pennyforgeorg/sendcheck-verify";
 
 // Throws SendCheckVerifyError unless the address passes the free pre-check.
 await verifyBeforePay("0x9504A5939AB5be2B2B1F8beA7D7ebeCcd96c485D");
@@ -113,13 +121,13 @@ await verifyBeforePay("0x9504A5939AB5be2B2B1F8beA7D7ebeCcd96c485D");
 CommonJS:
 
 ```js
-const { verifyBeforePay } = require("sendcheck-verify");
+const { verifyBeforePay } = require("@pennyforgeorg/sendcheck-verify");
 ```
 
 Typical wiring inside an x402 client:
 
 ```js
-import { verifyBeforePay } from "sendcheck-verify";
+import { verifyBeforePay } from "@pennyforgeorg/sendcheck-verify";
 import { wrapFetchWithPayment } from "x402-fetch"; // or your own x402 stack
 
 const pay = wrapFetchWithPayment(fetch, { wallet });

@@ -40,7 +40,7 @@ async function t(name, fn) {
 }
 
 await t("exports sanity", () => {
-  assert.equal(VERSION, "0.2.0");
+  assert.equal(VERSION, "0.2.1");
   assert.equal(DEFAULT_BASE_URL, "https://api.pennyforge.org");
   assert.equal(ATTESTATION_EXTENSION, "x-sendcheck-attestation");
 });

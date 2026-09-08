@@ -10,7 +10,7 @@
 
 Object.defineProperty(exports, "__esModule", { value: true });
 
-exports.VERSION = "0.2.0";
+exports.VERSION = "0.2.1";
 exports.DEFAULT_BASE_URL = "https://api.pennyforge.org";
 exports.ATTESTATION_EXTENSION = "x-sendcheck-attestation";
 

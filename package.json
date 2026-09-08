@@ -1,6 +1,6 @@
 {
-  "name": "sendcheck-verify",
-  "version": "0.2.0",
+  "name": "@pennyforgeorg/sendcheck-verify",
+  "version": "0.2.1",
   "description": "Verify-before-pay client for the SendCheck x402 API: free address pre-check + the signed service card (ES256 JWS over the payTo and per-route maxPrice) \u2014 pin the key once, verify the payment challenge cryptographically before paying. Zero dependencies.",
   "type": "module",
   "main": "./index.cjs",
@@ -50,5 +50,9 @@
   "license": "MIT",
   "engines": {
     "node": ">=18"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   }
 }

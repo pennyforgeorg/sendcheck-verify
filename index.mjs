@@ -33,7 +33,7 @@
  * Paid endpoints ($0.01/check, $0.05/deep): GET /openapi.json on the same host.
  */
 
-export const VERSION = "0.2.0";
+export const VERSION = "0.2.1";
 export const DEFAULT_BASE_URL = "https://api.pennyforge.org";
 export const ATTESTATION_EXTENSION = "x-sendcheck-attestation";
 
