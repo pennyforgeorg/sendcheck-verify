@@ -1,5 +1,7 @@
 # sendcheck-verify
 
+[![Listed on mcpservers.org](https://mcpservers.org/badge.svg)](https://mcpservers.org/servers/pennyforgeorg/sendcheck-verify)
+
 **Verify before you pay.** A zero-dependency client for the free
 [`GET /validate`](https://api.pennyforge.org/validate?address=0x…)
 pre-check on the [SendCheck x402 API](https://api.pennyforge.org/) —
